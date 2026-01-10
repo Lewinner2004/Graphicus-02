@@ -5,7 +5,7 @@
 
 class Rectangle : public Forme {
 public:
-	Rectangle(int x = 0, int y = 0, int hauteur = 1, int largeur = 1);
+	Rectangle(int x = 0, int y = 0, int largeur = 1, int hauteur = 1);
 	~Rectangle();
 	double aire();
 	void afficher(ostream& s);

@@ -128,7 +128,9 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="canevas.cpp" />
-    <ClCompile Include="carre.cpp" />
+    <ClCompile Include="carre.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+    </ClCompile>
     <ClCompile Include="cercle.cpp" />
     <ClCompile Include="couche.cpp" />
     <ClCompile Include="forme.cpp" />

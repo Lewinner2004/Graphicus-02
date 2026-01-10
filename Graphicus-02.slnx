@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="Graphicus-02.vcxproj" />
+  <Project Path="Graphicus-02.vcxproj" Id="8a1905df-918f-4503-a4b7-7d1a4884372d" />
 </Solution>

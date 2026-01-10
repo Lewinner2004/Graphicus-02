@@ -1,10 +1,12 @@
 #include "rectangle.h"
 
 
-Rectangle::Rectangle(int x, int y, int hauteur, int largeur) : Forme(x, y) {
+Rectangle::Rectangle(int x, int y, int largeur, int hauteur) : Forme(x, y) {
 	struct Coordonnee coord;
 	coord.x = 0;
 	coord.y = 0;
+	this->largeur = largeur;
+	this->hauteur = hauteur;
 }
 
 Rectangle::~Rectangle() {
