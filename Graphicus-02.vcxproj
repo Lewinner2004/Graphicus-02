@@ -137,6 +137,7 @@
     <ClCompile Include="graphicus-02.cpp" />
     <ClCompile Include="rectangle.cpp" />
     <ClCompile Include="tests.cpp" />
+    <ClCompile Include="vecteur.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="canevas.h" />
@@ -147,6 +148,7 @@
     <ClInclude Include="forme.h" />
     <ClInclude Include="rectangle.h" />
     <ClInclude Include="tests.h" />
+    <ClInclude Include="vecteur.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

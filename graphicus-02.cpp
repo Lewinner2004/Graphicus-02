@@ -9,6 +9,7 @@
 #include "tests.h"
 #include "carre.h"
 #include "cercle.h"
+#include "vecteur.h"
 
 using namespace std;
 
@@ -18,15 +19,24 @@ int main()
 
 	//tests.tests_application();
 	
-	Rectangle rectangle1(1, 2, 4, 5);
-	rectangle1.afficher(cout);
+	Rectangle rectangle1(0, 0, 4, 5);
+	Rectangle* p_rectangle1;
+	p_rectangle1 = &rectangle1;
 
-	Carre carre1;
-	carre1.set_cote(4);
-	carre1.afficher(cout);
+	Cercle cercle1(0, 0, 6);
+	Cercle* p_cercle1;
+	p_cercle1 = &cercle1;
 
-	Cercle cercle1(2, 3, 10);
-	cercle1.afficher(cout);
+
+
+	Vecteur vecteur1;
+
+	vecteur1.ajouter(p_rectangle1);
+	vecteur1.ajouter(p_cercle1);
+	vecteur1.afficher(cout);
+
+
+	
 	
 
 	return 0;
