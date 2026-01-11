@@ -34,9 +34,11 @@ void Rectangle::set_largeur(int largeur) {
 }
 
 void Rectangle::afficher(ostream& s) {
+	s << "Type: Rectangle" << endl;
 	s << "Hauteur: " << hauteur << endl;
 	s << "Largeur: " << largeur << endl;
 	Coordonnee coord = getAncrage();
 	s << "Point d'encrage: (" << coord.x << ", " << coord.y << ")" << endl;
+	s << "Aire: " << aire() << endl;
 }
 

@@ -24,8 +24,10 @@ double Carre::aire() {
 }
 
 void Carre::afficher(ostream& s) {
+	s << "Type: Carre" << endl;
 	s << "Cote: " << cote << endl;
 	Coordonnee coord = getAncrage();
 	s << "Point d'encrage: (" << coord.x << ", " << coord.y << ")" << endl;
+	s << "Aire: " << aire() << endl;
 }
 
