@@ -82,7 +82,7 @@ Forme* Vecteur::get_forme(int index) {
 void Vecteur::afficher(ostream& s) {
 	for (int i = 0; i < taille; i++) {
 		tableau[i]->afficher(s);
-		s << endl;
+		//s << endl;
 	}
 }
 

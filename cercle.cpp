@@ -24,11 +24,8 @@ void Cercle::set_rayon(int rayon) {
 }
 
 void Cercle::afficher(ostream& s) {
-	s << "Type: Cercle" << endl;
-	s << "Rayon: " << rayon << endl;
 	Coordonnee coord = getAncrage();
-	s << "Point d'ancrage: (" << coord.x << ", " << coord.y << ")" << endl;
-	s << "Aire: " << aire() << endl;
+	s << "Cercle (x=" << coord.x << ", y=" << coord.y << ", r=" << rayon << ", aire=" << aire() << ")" << endl;
 }
 
 
