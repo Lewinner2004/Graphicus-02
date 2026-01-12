@@ -26,10 +26,10 @@ public:
 	bool reinitialiser();
 	bool changer_etat(int etat);
 	int get_etat();
-	Vecteur* vecteur;
 
 private:
 	int etat = 0; //Initialisé=0, Active=1, Inactif=2
+	Vecteur* vecteur;
 
 
 };

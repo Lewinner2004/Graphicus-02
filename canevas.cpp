@@ -97,7 +97,6 @@ bool Canevas::desactiverCouche(int index) {
 
 bool Canevas::ajouterForme(Forme* p_forme) {
 	bool aucune_erreur = couches[get_etat_actif()]->ajouter(p_forme);
-	cout << vecteur->get_taille() << endl;
 	return aucune_erreur;
 }
 
@@ -121,7 +120,9 @@ bool Canevas::translater(int deltaX, int deltaY) {
 
 void Canevas::afficher(ostream& s) {
 	Forme* forme;
+	int taille;
 	for (int i = 0; i < MAX_COUCHES; i++) {
+		taille = couches[i]->get_taille();
 		s << "---- Couche " << i << " ----" << endl;
 		if (couches[i]->get_etat() == 0) {
 			s << "Etat: initialisee" << endl;
@@ -135,7 +136,7 @@ void Canevas::afficher(ostream& s) {
 		if (couches[i]->est_vide() == true) {
 			s << "Couche: vide" << endl;
 		}
-		for (int j = 0; j < couches[i]->get_taille(); j++) {
+		for (int j = 0; j < taille; j++) {
 			forme = couches[i]->get_forme(j);
 			forme->afficher(s);
 		}

@@ -20,13 +20,11 @@ Couche::~Couche() {
 }
 
 bool Couche::ajouter(Forme* forme) {
-	//std::cout << "Couche this = " << this << std::endl;
 	if (etat != 1) {
 		return false;
 	}
 	vecteur->ajouter(forme);
-	vecteur->inc_taille();
-	//cout << vecteur->get_taille() << endl;
+	int taille = vecteur->get_taille();
 	return true;
 }
 
@@ -89,7 +87,6 @@ bool Couche::changer_etat(int nouvel_etat) {
 }
 
 int Couche::get_etat() {
-	//std::cout << "Couche this = " << this << std::endl;
 	return etat;
 }
 
