@@ -1,59 +1,84 @@
-/********
- * Fichier: tests.cpp
- * Auteurs: C.-A. Brunet
- * Date: 28 novembre 2025
- * Description: Implémentation des méthodes des classes décrites dans
- *    tests.h.  Ce fichier peut être adapté à vos besoins de tests.
- *
- * Ce fichier fait partie de la distribution de Graphicus.
-********/
-
 #include "tests.h"
 
-void Tests::tests_unitaires_formes()
-{
-	// Tests des formes géométriques
+
+Tests::Tests() {
+
 }
 
-void Tests::tests_unitaires_vecteur()
-{
-	// Tests de la classe Vecteur
+Tests::~Tests() {
+
 }
 
-void Tests::tests_unitaires_couche()
-{
-	// Tests de la classe Couche
+void Tests::tests_validation(){
+
+	cout << "PARTIE 1" << endl << endl;
+
+	Canevas canevas;
+	Cercle cercle1(0, 0, 5);
+	Carre carre1(4, 1, 6);
+	Rectangle rectangle1(2, 8, 3, 9);
+	Rectangle rectangle2(0, 0, 4, 2);
+
+	canevas.activerCouche(2);
+	canevas.ajouterForme(&cercle1);
+	canevas.ajouterForme(&carre1);
+	canevas.ajouterForme(&rectangle1);
+
+	canevas.activerCouche(1);
+	canevas.ajouterForme(&rectangle2);
+
+	canevas.afficher(cout);
+	cout << "Aire totale: " << canevas.aire() << endl;
+	cout << endl << "REUSSI!" << endl;
+
+	cout << endl << "PARTIE 2 " << endl << endl;
+
+	Rectangle rectangle3(0, 0, 1, 1);
+	Carre carre2(-1, -3, 1);
+	Cercle cercle2(0, 0, 2);
+
+	canevas.activerCouche(0);
+	canevas.ajouterForme(&rectangle3);
+	canevas.ajouterForme(&carre2);
+	canevas.ajouterForme(&cercle2);
+
+	canevas.activerCouche(2);
+	canevas.translater(4, 3);
+
+	canevas.afficher(cout);
+	cout << "Aire totale: " << canevas.aire() << endl;
+	cout << endl << "REUSSI!" << endl;
+
+	cout << endl << "PARTIE 3" << endl << endl;
+
+	canevas.activerCouche(0);
+	canevas.retirerForme(1);
+
+	canevas.activerCouche(0);
+	canevas.retirerForme(0);
+
+	canevas.activerCouche(2);
+	canevas.reinitialiserCouche(2);
+
+	canevas.afficher(cout);
+	cout << "Aire totale: " << canevas.aire() << endl;
+	cout << endl << "REUSSI!" << endl;
+
+	cout << endl << "PARTIE 4" << endl << endl;
+
+	canevas.reinitialiser();
+
+	canevas.afficher(cout);
+	cout << "Aire totale: " << canevas.aire() << endl;
+	cout << endl << "REUSSI!" << endl;
+
+
+
+
+
+
+
+
+
 }
 
-void Tests::tests_unitaires_canevas()
-{
-	// Tests de la classe Canevas
-}
-
-void Tests::tests_unitaires()
-{
-	// Faire tous les tests unitaires
-	tests_unitaires_formes();
-	tests_unitaires_vecteur();
-	tests_unitaires_couche();
-	tests_unitaires_canevas();
-}
-
-void Tests::tests_application()
-{
-	// Faire tous les tests applicatifs
-	tests_application_cas_01();
-	tests_application_cas_02();
-}
-
-void Tests::tests_application_cas_01()
-{
-	cout << "TESTS APPLICATION (CAS 01)" << endl;
-	// Il faut ajouter les opérations réalisant ce scénario de test.
-}
-
-void Tests::tests_application_cas_02()
-{
-	cout << "TESTS APPLICATION (CAS 02)" << endl;
-	// Il faut ajouter les opérations realisant ce scénario de test.
-}

@@ -9,8 +9,8 @@
 #include "tests.h"
 #include "carre.h"
 #include "cercle.h"
-#include "vecteur.h"
-#include "canevas.h"
+#include "couche.h"
+#include "forme.h"
 
 using namespace std;
 
@@ -19,15 +19,11 @@ int main()
 	//Tests tests;
 
 	//tests.tests_application();
-	
-	Canevas canevas;
-	Cercle cercle1(1, 2, 5);
-	Cercle* p_cercle1 = &cercle1;
 
-	canevas.activerCouche(1);
-	canevas.ajouterForme(p_cercle1);
+	Tests test;
 
-	canevas.afficher(cout);
+	test.tests_validation();
+
 
 
 	

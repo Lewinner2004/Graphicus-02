@@ -35,6 +35,6 @@ void Rectangle::set_largeur(int largeur) {
 
 void Rectangle::afficher(ostream& s) {
 	Coordonnee coord = getAncrage();
-	s << "Rectangle (x=" << coord.x << ", y=" << coord.y << ", l=" << largeur << ", h=" << hauteur << ", aire=" << aire() << ")" << endl;
+	s << "Rectangle (x=" << ancrage.x << ", y=" << ancrage.y << ", l=" << largeur << ", h=" << hauteur << ", aire=" << aire() << ")" << endl;
 }
 
