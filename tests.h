@@ -15,6 +15,7 @@
 #include "canevas.h"
 #include "cercle.h"
 #include "carre.h"
+#include "rectangle.h"
 
 using namespace std;
 

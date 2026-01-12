@@ -13,11 +13,11 @@ Rectangle::~Rectangle() {
 
 }
 
-int Rectangle::get_hauteur() const {
+int Rectangle::get_hauteur() {
 	return hauteur;
 }
 
-int Rectangle::get_largeur() const {
+int Rectangle::get_largeur() {
 	return largeur;
 }
 

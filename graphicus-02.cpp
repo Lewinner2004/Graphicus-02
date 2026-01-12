@@ -11,6 +11,7 @@
 #include "cercle.h"
 #include "couche.h"
 #include "forme.h"
+#include "rectangle.h"
 
 using namespace std;
 

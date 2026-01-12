@@ -1,6 +1,6 @@
 #include "carre.h"
 
-Carre::Carre(int x, int y, int cote) : Rectangle(x, y) {
+Carre::Carre(int x, int y, int cote) {
 	struct Coordonnee coord;
 	coord.x = 0;
 	coord.y = 0;
@@ -11,7 +11,7 @@ Carre::~Carre() {
 
 }
 
-int Carre::get_cote() const {
+int Carre::get_cote() {
 	return cote;
 }
 

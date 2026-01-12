@@ -3,14 +3,12 @@
 
 #include "forme.h"
 
-class Vecteur : public Forme {
+class Vecteur {
 public:
 	Vecteur();
 	~Vecteur();
 	int get_capacite();
 	int get_taille();
-	void inc_taille();
-	void inc_capacite();
 	void effacer();
 	bool est_vide();
 	bool ajouter(Forme* figure);
@@ -19,6 +17,8 @@ public:
 	void afficher(ostream& s);
 
 private:
+	void inc_taille();
+	void inc_capacite();
 	void doubler();
 	double aire();
 	int taille = 0;

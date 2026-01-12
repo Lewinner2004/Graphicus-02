@@ -9,8 +9,8 @@ public:
 	~Rectangle();
 	double aire();
 	void afficher(ostream& s);
-	int get_hauteur() const;
-	int get_largeur() const;
+	int get_hauteur();
+	int get_largeur();
 	void set_hauteur(int hauteur);
 	void set_largeur(int largeur);
 private:
