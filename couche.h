@@ -26,10 +26,12 @@ public:
 	bool reinitialiser();
 	bool changer_etat(int nouvel_etat);
 	int get_etat();
+	int get_taille();
 	void afficher(ostream& s);
 
 private:
 	Vecteur vecteur;
+	int taille;
 	int etat; /*** 0=initialisé, 1=active, 2=inactive ***/ 
 };
 

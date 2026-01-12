@@ -20,24 +20,9 @@ int main()
 
 	//tests.tests_application();
 
-	Couche couche1;
+	Tests test;
 
-	Carre carre(0, 0, 4);
-	Rectangle rectangle(1, 1, 3, 4);
-	Cercle cercle(4, 4, 6);
-
-	Carre* p_carre = &carre;
-	Rectangle* p_rectangle = &rectangle;
-	Cercle* p_cercle = &cercle;
-
-	couche1.changer_etat(1);
-	couche1.ajouter(p_carre);
-	couche1.ajouter(p_rectangle);
-	couche1.ajouter(p_cercle);
-	cout << couche1.aire_totale() << endl;
-
-	couche1.afficher(cout);
-
+	test.tests_validation();
 
 
 

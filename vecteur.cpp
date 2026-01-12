@@ -79,8 +79,9 @@ Forme* Vecteur::retirer(int index) {
 	}
 	Forme* forme = tableau[index];
 	for (int i = index; i < (taille - 1); i++) {
-		tableau[index] = tableau[i + 1];
+		tableau[i] = tableau[i + 1];
 	}
+	taille--;
 	return forme;
 }
 

@@ -15,7 +15,7 @@ Couche::Couche() {
 }
 
 Couche::~Couche() {
-
+	reinitialiser();
 }
 
 bool Couche::ajouter(Forme* forme) {
@@ -27,7 +27,7 @@ bool Couche::ajouter(Forme* forme) {
 }
 
 Forme* Couche::get_forme(int index) {
-	if (etat != 1) {
+	if (etat == 0) {
 		return nullptr;
 	}
 	return vecteur.get_forme(index);
@@ -71,6 +71,11 @@ bool Couche::reinitialiser() {
 
 int Couche::get_etat() {
 	return etat;
+}
+
+int Couche::get_taille() {
+	taille = vecteur.get_taille();
+	return taille;
 }
 
 bool Couche::changer_etat(int nouvel_etat) {
