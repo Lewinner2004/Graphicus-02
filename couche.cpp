@@ -59,6 +59,7 @@ bool Couche::translation(int dX, int dY) {
 	for (int i = 0; i < taille; i++) {
 		vecteur.get_forme(i)->translater(dX, dY);
 	}
+	return true;
 }
 
 bool Couche::reinitialiser() {
