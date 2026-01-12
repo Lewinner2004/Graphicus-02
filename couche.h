@@ -12,7 +12,24 @@
 #ifndef COUCHE_H
 #define COUCHE_H
 
-class Couche {
+#include "vecteur.h"
+
+class Couche : public Vecteur {
+public:
+	Couche();
+	~Couche();
+	bool ajouter(Forme* forme);
+	Forme* retirer(int index);
+	Forme* get_forme(int index);
+	double aire_totale();
+	bool translater_tout(struct Coordonnee coord);
+	bool reinitialiser();
+	bool changer_etat(int etat);
+	int get_etat();
+	Vecteur* vecteur;
+
+private:
+	int etat = 0; //Initialisé=0, Active=1, Inactif=2
 
 
 };

@@ -12,12 +12,20 @@ double Vecteur::aire() {
 	return 0;
 }
 
-int Vecteur::get_capacite() {
+int Vecteur::get_capacite() const {
 	return capacite;
 }
 
-int Vecteur::get_taille() {
+int Vecteur::get_taille() const {
 	return taille;
+}
+
+void Vecteur::inc_capacite() {
+	capacite++;
+}
+
+void Vecteur::inc_taille() {
+	this->taille++;
 }
 
 void Vecteur::doubler() {
@@ -37,6 +45,9 @@ void Vecteur::doubler() {
 
 void Vecteur::effacer() {
 	delete[] tableau;
+	capacite = 1;
+	taille = 0;
+	tableau = new Forme * [capacite];
 }
 
 bool Vecteur::est_vide() {
@@ -53,7 +64,9 @@ bool Vecteur::ajouter(Forme* figure) {
 		doubler();
 	}
 	tableau[taille] = figure;
-	taille++;
+	cout << "Avant: " << taille << endl;
+	inc_taille();
+	cout << "Apres: " << taille << endl;
 	if (taille > capacite) {
 		return false;
 	}
@@ -71,7 +84,7 @@ Forme* Vecteur::retirer(int index) {
 	return forme;
 }
 
-Forme* Vecteur::get_forme(int index) {
+Forme* Vecteur::get_forme(int index) const {
 	if (index < 0 || index >= taille) {
 		return nullptr;
 	}

@@ -19,8 +19,7 @@ const int MAX_COUCHES = 5;
 
 using namespace std;
 
-class Canevas
-{
+class Canevas : public Couche {
 public:
 	Canevas();
 	~Canevas();
@@ -34,7 +33,8 @@ public:
 	bool translater(int deltaX, int deltaY);
 	void afficher(ostream& s);
 private:
-	Couche couches[MAX_COUCHES];
+	Couche* couches[MAX_COUCHES];
+	int get_etat_actif();
 };
 
 #endif
