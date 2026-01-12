@@ -11,8 +11,7 @@
 #include "couche.h"
 
 Couche::Couche() {
-	etat = 0;
-	vecteur = new Vecteur();
+	int etat = 0;
 }
 
 Couche::~Couche() {
@@ -23,66 +22,50 @@ bool Couche::ajouter(Forme* forme) {
 	if (etat != 1) {
 		return false;
 	}
-	vecteur->ajouter(forme);
-	int taille = vecteur->get_taille();
+	vecteur.ajouter(forme);
 	return true;
-}
-
-Forme* Couche::retirer(int index) {
-	if (etat != 1) {
-		return nullptr;
-	}
-	Forme* forme = vecteur->get_forme(index);
-	vecteur->retirer(index);
-	return forme;
 }
 
 Forme* Couche::get_forme(int index) {
 	if (etat != 1) {
 		return nullptr;
 	}
-	Forme* forme = vecteur->get_forme(index);
+	return vecteur.get_forme(index);
+}
+
+Forme* Couche::retirer(int index) {
+	if (etat != 1) {
+		return nullptr;
+	}
+	Forme* forme = get_forme(index);
+	vecteur.retirer(index);
 	return forme;
 }
 
 double Couche::aire_totale() {
-	if (etat != 1) {
-		return -1;
+	double aire = 0;
+	int taille = vecteur.get_taille();
+	for (int i = 0; i < taille; i++) {
+		aire += vecteur.get_forme(i)->aire();
 	}
-	double aire_couche = 0;
-	Forme* forme;
-	for (int i = 0; i < vecteur->get_taille(); i++) {
-		forme = vecteur->get_forme(i);
-		aire_couche += forme->aire();
-	}
-	return aire_couche;
+	return aire;
 }
 
-bool Couche::translater_tout(struct Coordonnee coord) {
+bool Couche::translation(int dX, int dY) {
 	if (etat != 1) {
 		return false;
 	}
-	Forme* forme;
-	for (int i = 0; i < vecteur->get_taille(); i++) {
-		forme = vecteur->get_forme(i);
-		forme->setAncrage(coord);
+	int taille = vecteur.get_taille();
+	for (int i = 0; i < taille; i++) {
+		vecteur.get_forme(i)->translater(dX, dY);
 	}
-	return true;
 }
 
 bool Couche::reinitialiser() {
-	if (vecteur->est_vide() == true) {
+	vecteur.effacer();
+	if (aire_totale() != 0) {
 		return false;
 	}
-	vecteur->effacer();
-	return true;
-}
-
-bool Couche::changer_etat(int nouvel_etat) {
-	if (etat == nouvel_etat) {
-		return false;
-	}
-	etat = nouvel_etat;
 	return true;
 }
 
@@ -90,7 +73,14 @@ int Couche::get_etat() {
 	return etat;
 }
 
+bool Couche::changer_etat(int nouvel_etat) {
+	if (nouvel_etat == 0) {
+		return false;
+	}
+	etat = nouvel_etat;
+	return true;
+}
 
-
-
-
+void Couche::afficher(ostream& s) {
+	vecteur.afficher(s);
+}

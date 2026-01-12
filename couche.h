@@ -14,7 +14,7 @@
 
 #include "vecteur.h"
 
-class Couche : public Vecteur {
+class Couche {
 public:
 	Couche();
 	~Couche();
@@ -22,16 +22,15 @@ public:
 	Forme* retirer(int index);
 	Forme* get_forme(int index);
 	double aire_totale();
-	bool translater_tout(struct Coordonnee coord);
+	bool translation(int dX, int dY);
 	bool reinitialiser();
-	bool changer_etat(int etat);
+	bool changer_etat(int nouvel_etat);
 	int get_etat();
+	void afficher(ostream& s);
 
 private:
-	int etat = 0; //Initialisé=0, Active=1, Inactif=2
-	Vecteur* vecteur;
-
-
+	Vecteur vecteur;
+	int etat; /*** 0=initialisé, 1=active, 2=inactive ***/ 
 };
 
 #endif

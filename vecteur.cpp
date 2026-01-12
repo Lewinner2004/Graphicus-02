@@ -1,6 +1,8 @@
 #include "vecteur.h"
 
 Vecteur::Vecteur() {
+	taille = 0;
+	capacite = 1;
 	tableau = new Forme* [capacite];
 }
 
