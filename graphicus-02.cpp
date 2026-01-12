@@ -34,6 +34,7 @@ int main()
 	couche1.ajouter(p_carre);
 	couche1.ajouter(p_rectangle);
 	couche1.ajouter(p_cercle);
+	cout << couche1.aire_totale() << endl;
 
 	couche1.afficher(cout);
 
