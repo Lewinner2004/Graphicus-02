@@ -41,6 +41,7 @@ bool Canevas::reinitialiser() {
 	if (nbr_couches_vides == MAX_COUCHES) {
 		return false;
 	}
+	activerCouche(0);
 	return true;
 }
 

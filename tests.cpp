@@ -14,18 +14,19 @@ void Tests::tests_validation(){
 	cout << "PARTIE 1" << endl << endl;
 
 	Canevas canevas;
-	Cercle cercle1(0, 0, 5);
-	Carre carre1(4, 1, 6);
-	Rectangle rectangle1(2, 8, 3, 9);
-	Rectangle rectangle2(0, 0, 4, 2);
+
+	Forme* cercle1 = new Cercle(0, 0, 5);
+	Forme* carre1 = new Carre(4, 1, 6);
+	Forme* rectangle1 = new Rectangle(2, 8, 3, 9);
+	Forme* rectangle2 = new Rectangle(0, 0, 4, 2);
 
 	canevas.activerCouche(2);
-	canevas.ajouterForme(&cercle1);
-	canevas.ajouterForme(&carre1);
-	canevas.ajouterForme(&rectangle1);
+	canevas.ajouterForme(cercle1);
+	canevas.ajouterForme(carre1);
+	canevas.ajouterForme(rectangle1);
 
 	canevas.activerCouche(1);
-	canevas.ajouterForme(&rectangle2);
+	canevas.ajouterForme(rectangle2);
 
 	canevas.afficher(cout);
 	cout << "Aire totale: " << canevas.aire() << endl;
@@ -33,14 +34,14 @@ void Tests::tests_validation(){
 
 	cout << endl << "PARTIE 2 " << endl << endl;
 
-	Rectangle rectangle3(0, 0, 1, 1);
-	Carre carre2(-1, -3, 1);
-	Cercle cercle2(0, 0, 2);
+	Forme* rectangle3 = new Rectangle(0, 0, 1, 1);
+	Forme* carre2 = new Carre(-1, -3, 1);
+	Forme* cercle2 = new Cercle(0, 0, 2);
 
 	canevas.activerCouche(0);
-	canevas.ajouterForme(&rectangle3);
-	canevas.ajouterForme(&carre2);
-	canevas.ajouterForme(&cercle2);
+	canevas.ajouterForme(rectangle3);
+	canevas.ajouterForme(carre2);
+	canevas.ajouterForme(cercle2);
 
 	canevas.activerCouche(2);
 	canevas.translater(4, 3);
@@ -71,6 +72,8 @@ void Tests::tests_validation(){
 	canevas.afficher(cout);
 	cout << "Aire totale: " << canevas.aire() << endl;
 	cout << endl << "REUSSI!" << endl;
+
+	delete carre1, carre2, rectangle1, rectangle2, rectangle3, cercle1, cercle2;
 
 
 
