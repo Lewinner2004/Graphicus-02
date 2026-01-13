@@ -1,6 +1,6 @@
 /********
  * Fichier: coordonnee.h
- * Auteurs: C.-A. Brunet
+ * Auteurs: C.-A. Brunet, ALEXIS DELISLE (DELA8776), MAXIM TREMBLAY (TREM4095)
  * Date: 28 novembre 2025
  * Description: Structure pour l'ancrage d'une forme géométrique. Cette
  *    structure, donc de fichier, ne doit pas être modifiée.

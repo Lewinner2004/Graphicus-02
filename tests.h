@@ -1,6 +1,6 @@
 /********
  * Fichier: tests.h
- * Auteurs: C.-A. Brunet
+ * Auteurs: C.-A. Brunet, ALEXIS DELISLE (DELA8776), MAXIM TREMBLAY (TREM4095)
  * Date: 28 novembre 2025
  * Description: Déclaration de la classe pour les tests de Graphicus.
  *    Ce fichier peut être adapté à vos besoins de tests.

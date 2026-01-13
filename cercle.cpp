@@ -1,3 +1,4 @@
+//ALEXIS DELISLE (DELA8776), MAXIM TREMBLAY (TREM4095)
 #include "cercle.h"
 
 Cercle::Cercle(int x, int y, int rayon) : Forme(x, y) {

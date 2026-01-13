@@ -1,3 +1,4 @@
+//ALEXIS DELISLE (DELA8776), MAXIM TREMBLAY (TREM4095)
 #include "carre.h"
 
 Carre::Carre(int x, int y, int cote) {

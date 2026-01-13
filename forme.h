@@ -1,6 +1,6 @@
 /********
  * Fichier: forme.h
- * Auteurs: C.-A. Brunet
+ * Auteurs: C.-A. Brunet, ALEXIS DELISLE (DELA8776), MAXIM TREMBLAY (TREM4095)
  * Date: 28 novembre 2025
  * Description: Déclaration des classes de formes géométriques. La
  *    classe Forme ne doit pas être modifiée.

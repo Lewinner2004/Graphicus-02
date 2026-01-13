@@ -1,6 +1,6 @@
 /********
  * Fichier: canevas.h
- * Auteurs: C.-A. Brunet
+ * Auteurs: C.-A. Brunet, ALEXIS DELISLE (DELA8776), MAXIM TREMBLAY (TREM4095)
  * Date: 28 novembre 2025
  * Description: Déclaration de la classe Canevas. La classe gère un
  *    tableau de couches en accord avec les spécifications de Graphicus.

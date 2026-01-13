@@ -1,6 +1,6 @@
 /********
  * Fichier: couche.cpp
- * Auteurs: C.-A. Brunet
+ * Auteurs: C.-A. Brunet, ALEXIS DELISLE (DELA8776), MAXIM TREMBLAY (TREM4095)
  * Date: 28 novembre 2025
  * Description: Implémentation des méthodes des classes décrites dans
  *    couche.h.
